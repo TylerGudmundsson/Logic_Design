@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="tutorial3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|tutorial3|BCD7SEG:BCD7SEG_1|lpm_mux0:inst14|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|tutorial3|BCD7SEG:BCD7SEG_1|lpm_mux0:inst25|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|tutorial3|BCD7SEG:BCD7SEG_1|lpm_mux0:inst9|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|tutorial3|BCD7SEG:BCD7SEG_1|lpm_mux0:inst19|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|tutorial3|BCD7SEG:BCD7SEG_1|lpm_mux0:inst20|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|tutorial3|BCD7SEG:BCD7SEG_1|lpm_mux0:inst4|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|tutorial3|BCD7SEG:BCD7SEG_1|lpm_mux0:inst|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

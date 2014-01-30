@@ -1,0 +1,85 @@
+Flow report for designtemplate
+Wed Jan 17 13:41:12 2007
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Elapsed Time
+  5. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------+
+; Flow Summary                                                       ;
++-------------------------+------------------------------------------+
+; Flow Status             ; Successful - Wed Jan 17 13:41:12 2007    ;
+; Quartus II Version      ; 5.1 Build 176 10/26/2005 SJ Full Version ;
+; Revision Name           ; designtemplate                           ;
+; Top-level Entity Name   ; designtemplate                           ;
+; Family                  ; MAX7000S                                 ;
+; Device                  ; EPM7128SLC84-7                           ;
+; Timing Models           ; Final                                    ;
+; Met timing requirements ; Yes                                      ;
+; Total macrocells        ; 39 / 128 ( 30 % )                        ;
+; Total pins              ; 12 / 68 ( 18 % )                         ;
++-------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 01/17/2007 13:41:03 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; designtemplate      ;
++-------------------+---------------------+
+
+
++-------------------------------------+
+; Flow Elapsed Time                   ;
++----------------------+--------------+
+; Module Name          ; Elapsed Time ;
++----------------------+--------------+
+; Analysis & Synthesis ; 00:00:03     ;
+; Fitter               ; 00:00:01     ;
+; Assembler            ; 00:00:01     ;
+; Timing Analyzer      ; 00:00:01     ;
+; Total                ; 00:00:06     ;
++----------------------+--------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off designtemplate -c designtemplate
+quartus_fit --read_settings_files=off --write_settings_files=off designtemplate -c designtemplate
+quartus_asm --read_settings_files=off --write_settings_files=off designtemplate -c designtemplate
+quartus_tan --read_settings_files=off --write_settings_files=off designtemplate -c designtemplate
+
+
+

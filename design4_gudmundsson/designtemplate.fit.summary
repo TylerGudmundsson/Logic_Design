@@ -1,0 +1,9 @@
+Fitter Status : Successful - Wed Jan 17 13:41:08 2007
+Quartus II Version : 5.1 Build 176 10/26/2005 SJ Full Version
+Revision Name : designtemplate
+Top-level Entity Name : designtemplate
+Family : MAX7000S
+Device : EPM7128SLC84-7
+Timing Models : Final
+Total macrocells : 39 / 128 ( 30 % )
+Total pins : 12 / 68 ( 18 % )

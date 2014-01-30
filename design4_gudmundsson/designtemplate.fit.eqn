@@ -1,0 +1,349 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--D1_CLK_1HZ_CNT[0] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[0] at LC1
+D1_CLK_1HZ_CNT[0]_p1_out = D1_CLK_1HZ_CNT[23] & D1_CLK_1HZ_CNT[22] & !D1_CLK_1HZ_CNT[21] & !D1_CLK_1HZ_CNT[20] & !D1_CLK_1HZ_CNT[19] & !D1_CLK_1HZ_CNT[18] & !D1_CLK_1HZ_CNT[17] & !D1_CLK_1HZ_CNT[16] & !D1_CLK_1HZ_CNT[15] & !D1_CLK_1HZ_CNT[14] & !D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & !D1_CLK_1HZ_CNT[11] & !D1_CLK_1HZ_CNT[10] & !D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[5] & !D1_CLK_1HZ_CNT[4] & !D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & !D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[0]_or_out = D1_CLK_1HZ_CNT[0]_p1_out;
+D1_CLK_1HZ_CNT[0]_reg_input = !D1_CLK_1HZ_CNT[0]_or_out;
+D1_CLK_1HZ_CNT[0] = TFFE(D1_CLK_1HZ_CNT[0]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[1] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[1] at LC21
+D1_CLK_1HZ_CNT[1]_or_out = D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[1]_reg_input = D1_CLK_1HZ_CNT[1] $ D1_CLK_1HZ_CNT[1]_or_out;
+D1_CLK_1HZ_CNT[1] = DFFE(D1_CLK_1HZ_CNT[1]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[2] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[2] at LC2
+D1_CLK_1HZ_CNT[2]_p1_out = D1_CLK_1HZ_CNT[23] & D1_CLK_1HZ_CNT[22] & !D1_CLK_1HZ_CNT[21] & !D1_CLK_1HZ_CNT[20] & !D1_CLK_1HZ_CNT[19] & !D1_CLK_1HZ_CNT[18] & !D1_CLK_1HZ_CNT[17] & !D1_CLK_1HZ_CNT[16] & !D1_CLK_1HZ_CNT[15] & !D1_CLK_1HZ_CNT[14] & !D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & !D1_CLK_1HZ_CNT[11] & !D1_CLK_1HZ_CNT[10] & !D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[5] & !D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[3] & !D1_CLK_1HZ_CNT[1] & !D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[2]_p2_out = D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[2]_or_out = D1_CLK_1HZ_CNT[2]_p1_out # D1_CLK_1HZ_CNT[2]_p2_out;
+D1_CLK_1HZ_CNT[2]_reg_input = D1_CLK_1HZ_CNT[2]_or_out;
+D1_CLK_1HZ_CNT[2] = TFFE(D1_CLK_1HZ_CNT[2]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[3] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[3] at LC3
+D1_CLK_1HZ_CNT[3]_p1_out = D1_CLK_1HZ_CNT[23] & D1_CLK_1HZ_CNT[22] & !D1_CLK_1HZ_CNT[21] & !D1_CLK_1HZ_CNT[20] & !D1_CLK_1HZ_CNT[19] & !D1_CLK_1HZ_CNT[18] & !D1_CLK_1HZ_CNT[17] & !D1_CLK_1HZ_CNT[16] & !D1_CLK_1HZ_CNT[15] & !D1_CLK_1HZ_CNT[14] & !D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & !D1_CLK_1HZ_CNT[11] & !D1_CLK_1HZ_CNT[10] & !D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[5] & !D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & !D1_CLK_1HZ_CNT[1] & !D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[3]_p2_out = D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[3]_or_out = D1_CLK_1HZ_CNT[3]_p1_out # D1_CLK_1HZ_CNT[3]_p2_out;
+D1_CLK_1HZ_CNT[3]_reg_input = D1_CLK_1HZ_CNT[3]_or_out;
+D1_CLK_1HZ_CNT[3] = TFFE(D1_CLK_1HZ_CNT[3]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[4] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[4] at LC22
+D1_CLK_1HZ_CNT[4]_p1_out = D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[4]_or_out = D1_CLK_1HZ_CNT[4];
+D1_CLK_1HZ_CNT[4]_reg_input = D1_CLK_1HZ_CNT[4]_p1_out $ D1_CLK_1HZ_CNT[4]_or_out;
+D1_CLK_1HZ_CNT[4] = DFFE(D1_CLK_1HZ_CNT[4]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[5] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[5] at LC4
+D1_CLK_1HZ_CNT[5]_p1_out = D1_CLK_1HZ_CNT[23] & D1_CLK_1HZ_CNT[22] & !D1_CLK_1HZ_CNT[21] & !D1_CLK_1HZ_CNT[20] & !D1_CLK_1HZ_CNT[19] & !D1_CLK_1HZ_CNT[18] & !D1_CLK_1HZ_CNT[17] & !D1_CLK_1HZ_CNT[16] & !D1_CLK_1HZ_CNT[15] & !D1_CLK_1HZ_CNT[14] & !D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & !D1_CLK_1HZ_CNT[11] & !D1_CLK_1HZ_CNT[10] & !D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & !D1_CLK_1HZ_CNT[4] & !D1_CLK_1HZ_CNT[1] & !D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[5]_p2_out = D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[5]_or_out = D1_CLK_1HZ_CNT[5]_p1_out # D1_CLK_1HZ_CNT[5]_p2_out;
+D1_CLK_1HZ_CNT[5]_reg_input = D1_CLK_1HZ_CNT[5]_or_out;
+D1_CLK_1HZ_CNT[5] = TFFE(D1_CLK_1HZ_CNT[5]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[6] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[6] at LC5
+D1_CLK_1HZ_CNT[6]_p1_out = D1_CLK_1HZ_CNT[23] & D1_CLK_1HZ_CNT[22] & !D1_CLK_1HZ_CNT[21] & !D1_CLK_1HZ_CNT[20] & !D1_CLK_1HZ_CNT[19] & !D1_CLK_1HZ_CNT[18] & !D1_CLK_1HZ_CNT[17] & !D1_CLK_1HZ_CNT[16] & !D1_CLK_1HZ_CNT[15] & !D1_CLK_1HZ_CNT[14] & !D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & !D1_CLK_1HZ_CNT[11] & !D1_CLK_1HZ_CNT[10] & !D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & !D1_CLK_1HZ_CNT[4] & !D1_CLK_1HZ_CNT[1] & !D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[6]_p2_out = D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[6]_or_out = D1_CLK_1HZ_CNT[6]_p1_out # D1_CLK_1HZ_CNT[6]_p2_out;
+D1_CLK_1HZ_CNT[6]_reg_input = D1_CLK_1HZ_CNT[6]_or_out;
+D1_CLK_1HZ_CNT[6] = TFFE(D1_CLK_1HZ_CNT[6]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[7] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[7] at LC6
+D1_CLK_1HZ_CNT[7]_p1_out = D1_CLK_1HZ_CNT[23] & D1_CLK_1HZ_CNT[22] & !D1_CLK_1HZ_CNT[21] & !D1_CLK_1HZ_CNT[20] & !D1_CLK_1HZ_CNT[19] & !D1_CLK_1HZ_CNT[18] & !D1_CLK_1HZ_CNT[17] & !D1_CLK_1HZ_CNT[16] & !D1_CLK_1HZ_CNT[15] & !D1_CLK_1HZ_CNT[14] & !D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & !D1_CLK_1HZ_CNT[11] & !D1_CLK_1HZ_CNT[10] & !D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & !D1_CLK_1HZ_CNT[4] & !D1_CLK_1HZ_CNT[1] & !D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[7]_p2_out = D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[7]_or_out = D1_CLK_1HZ_CNT[7]_p1_out # D1_CLK_1HZ_CNT[7]_p2_out;
+D1_CLK_1HZ_CNT[7]_reg_input = D1_CLK_1HZ_CNT[7]_or_out;
+D1_CLK_1HZ_CNT[7] = TFFE(D1_CLK_1HZ_CNT[7]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[8] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[8] at LC7
+D1_CLK_1HZ_CNT[8]_p1_out = D1_CLK_1HZ_CNT[23] & D1_CLK_1HZ_CNT[22] & !D1_CLK_1HZ_CNT[21] & !D1_CLK_1HZ_CNT[20] & !D1_CLK_1HZ_CNT[19] & !D1_CLK_1HZ_CNT[18] & !D1_CLK_1HZ_CNT[17] & !D1_CLK_1HZ_CNT[16] & !D1_CLK_1HZ_CNT[15] & !D1_CLK_1HZ_CNT[14] & !D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & !D1_CLK_1HZ_CNT[11] & !D1_CLK_1HZ_CNT[10] & !D1_CLK_1HZ_CNT[9] & !D1_CLK_1HZ_CNT[4] & !D1_CLK_1HZ_CNT[1] & !D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[8]_p2_out = D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[8]_or_out = D1_CLK_1HZ_CNT[8]_p1_out # D1_CLK_1HZ_CNT[8]_p2_out;
+D1_CLK_1HZ_CNT[8]_reg_input = D1_CLK_1HZ_CNT[8]_or_out;
+D1_CLK_1HZ_CNT[8] = TFFE(D1_CLK_1HZ_CNT[8]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[9] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[9] at LC23
+D1_CLK_1HZ_CNT[9]_p1_out = D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[9]_or_out = D1_CLK_1HZ_CNT[9];
+D1_CLK_1HZ_CNT[9]_reg_input = D1_CLK_1HZ_CNT[9]_p1_out $ D1_CLK_1HZ_CNT[9]_or_out;
+D1_CLK_1HZ_CNT[9] = DFFE(D1_CLK_1HZ_CNT[9]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[10] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[10] at LC24
+D1_CLK_1HZ_CNT[10]_p1_out = D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[10]_or_out = D1_CLK_1HZ_CNT[10];
+D1_CLK_1HZ_CNT[10]_reg_input = D1_CLK_1HZ_CNT[10]_p1_out $ D1_CLK_1HZ_CNT[10]_or_out;
+D1_CLK_1HZ_CNT[10] = DFFE(D1_CLK_1HZ_CNT[10]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[11] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[11] at LC25
+D1_CLK_1HZ_CNT[11]_p1_out = D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[11]_or_out = D1_CLK_1HZ_CNT[11];
+D1_CLK_1HZ_CNT[11]_reg_input = D1_CLK_1HZ_CNT[11]_p1_out $ D1_CLK_1HZ_CNT[11]_or_out;
+D1_CLK_1HZ_CNT[11] = DFFE(D1_CLK_1HZ_CNT[11]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[12] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[12] at LC9
+D1_CLK_1HZ_CNT[12]_p1_out = D1_CLK_1HZ_CNT[23] & D1_CLK_1HZ_CNT[22] & !D1_CLK_1HZ_CNT[21] & !D1_CLK_1HZ_CNT[20] & !D1_CLK_1HZ_CNT[19] & !D1_CLK_1HZ_CNT[18] & !D1_CLK_1HZ_CNT[17] & !D1_CLK_1HZ_CNT[16] & !D1_CLK_1HZ_CNT[15] & !D1_CLK_1HZ_CNT[14] & !D1_CLK_1HZ_CNT[13] & !D1_CLK_1HZ_CNT[11] & !D1_CLK_1HZ_CNT[10] & !D1_CLK_1HZ_CNT[9] & !D1_CLK_1HZ_CNT[4] & !D1_CLK_1HZ_CNT[1] & !D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[12]_p2_out = D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[12]_or_out = D1_CLK_1HZ_CNT[12]_p1_out # D1_CLK_1HZ_CNT[12]_p2_out;
+D1_CLK_1HZ_CNT[12]_reg_input = D1_CLK_1HZ_CNT[12]_or_out;
+D1_CLK_1HZ_CNT[12] = TFFE(D1_CLK_1HZ_CNT[12]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[13] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[13] at LC26
+D1_CLK_1HZ_CNT[13]_p1_out = D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[13]_or_out = D1_CLK_1HZ_CNT[13];
+D1_CLK_1HZ_CNT[13]_reg_input = D1_CLK_1HZ_CNT[13]_p1_out $ D1_CLK_1HZ_CNT[13]_or_out;
+D1_CLK_1HZ_CNT[13] = DFFE(D1_CLK_1HZ_CNT[13]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[14] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[14] at LC27
+D1_CLK_1HZ_CNT[14]_p1_out = D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[14]_or_out = D1_CLK_1HZ_CNT[14];
+D1_CLK_1HZ_CNT[14]_reg_input = D1_CLK_1HZ_CNT[14]_p1_out $ D1_CLK_1HZ_CNT[14]_or_out;
+D1_CLK_1HZ_CNT[14] = DFFE(D1_CLK_1HZ_CNT[14]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[15] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[15] at LC28
+D1_CLK_1HZ_CNT[15]_p1_out = D1_CLK_1HZ_CNT[14] & D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[15]_or_out = D1_CLK_1HZ_CNT[15];
+D1_CLK_1HZ_CNT[15]_reg_input = D1_CLK_1HZ_CNT[15]_p1_out $ D1_CLK_1HZ_CNT[15]_or_out;
+D1_CLK_1HZ_CNT[15] = DFFE(D1_CLK_1HZ_CNT[15]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[16] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[16] at LC29
+D1_CLK_1HZ_CNT[16]_p1_out = D1_CLK_1HZ_CNT[15] & D1_CLK_1HZ_CNT[14] & D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[16]_or_out = D1_CLK_1HZ_CNT[16]_p1_out;
+D1_CLK_1HZ_CNT[16]_reg_input = D1_CLK_1HZ_CNT[16]_or_out;
+D1_CLK_1HZ_CNT[16] = TFFE(D1_CLK_1HZ_CNT[16]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[17] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[17] at LC30
+D1_CLK_1HZ_CNT[17]_p1_out = D1_CLK_1HZ_CNT[16] & D1_CLK_1HZ_CNT[15] & D1_CLK_1HZ_CNT[14] & D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[17]_or_out = D1_CLK_1HZ_CNT[17];
+D1_CLK_1HZ_CNT[17]_reg_input = D1_CLK_1HZ_CNT[17]_p1_out $ D1_CLK_1HZ_CNT[17]_or_out;
+D1_CLK_1HZ_CNT[17] = DFFE(D1_CLK_1HZ_CNT[17]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[18] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[18] at LC31
+D1_CLK_1HZ_CNT[18]_p1_out = D1_CLK_1HZ_CNT[17] & D1_CLK_1HZ_CNT[16] & D1_CLK_1HZ_CNT[15] & D1_CLK_1HZ_CNT[14] & D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[18]_or_out = D1_CLK_1HZ_CNT[18];
+D1_CLK_1HZ_CNT[18]_reg_input = D1_CLK_1HZ_CNT[18]_p1_out $ D1_CLK_1HZ_CNT[18]_or_out;
+D1_CLK_1HZ_CNT[18] = DFFE(D1_CLK_1HZ_CNT[18]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[19] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[19] at LC8
+D1_CLK_1HZ_CNT[19]_p1_out = D1_CLK_1HZ_CNT[18] & D1_CLK_1HZ_CNT[17] & D1_CLK_1HZ_CNT[16] & D1_CLK_1HZ_CNT[15] & D1_CLK_1HZ_CNT[14] & D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[19]_or_out = D1_CLK_1HZ_CNT[19];
+D1_CLK_1HZ_CNT[19]_reg_input = D1_CLK_1HZ_CNT[19]_p1_out $ D1_CLK_1HZ_CNT[19]_or_out;
+D1_CLK_1HZ_CNT[19] = DFFE(D1_CLK_1HZ_CNT[19]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[20] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[20] at LC10
+D1_CLK_1HZ_CNT[20]_p1_out = D1_CLK_1HZ_CNT[19] & D1_CLK_1HZ_CNT[18] & D1_CLK_1HZ_CNT[17] & D1_CLK_1HZ_CNT[16] & D1_CLK_1HZ_CNT[15] & D1_CLK_1HZ_CNT[14] & D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[20]_or_out = D1_CLK_1HZ_CNT[20];
+D1_CLK_1HZ_CNT[20]_reg_input = D1_CLK_1HZ_CNT[20]_p1_out $ D1_CLK_1HZ_CNT[20]_or_out;
+D1_CLK_1HZ_CNT[20] = DFFE(D1_CLK_1HZ_CNT[20]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_CNT[21] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[21] at LC11
+D1_CLK_1HZ_CNT[21]_p1_out = D1_CLK_1HZ_CNT[20] & D1_CLK_1HZ_CNT[19] & D1_CLK_1HZ_CNT[18] & D1_CLK_1HZ_CNT[17] & D1_CLK_1HZ_CNT[16] & D1_CLK_1HZ_CNT[15] & D1_CLK_1HZ_CNT[14] & D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+D1_CLK_1HZ_CNT[21]_or_out = D1_CLK_1HZ_CNT[21];
+D1_CLK_1HZ_CNT[21]_reg_input = D1_CLK_1HZ_CNT[21]_p1_out $ D1_CLK_1HZ_CNT[21]_or_out;
+D1_CLK_1HZ_CNT[21] = DFFE(D1_CLK_1HZ_CNT[21]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--N2L1 is INT_CLK_GEN:UC1|lpm_add_sub:add_rtl_0|addcore:adder[2]|a_csnbuffer:result_node|sout_node[6]~59 at LC12
+N2L1_p1_out = D1_CLK_1HZ_CNT[21] & D1_CLK_1HZ_CNT[20] & D1_CLK_1HZ_CNT[19] & D1_CLK_1HZ_CNT[18] & D1_CLK_1HZ_CNT[17] & D1_CLK_1HZ_CNT[16] & D1_CLK_1HZ_CNT[15] & D1_CLK_1HZ_CNT[14] & D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+N2L1_or_out = D1_CLK_1HZ_CNT[22];
+N2L1 = N2L1_p1_out $ N2L1_or_out;
+
+
+--D1_CLK_1HZ_CNT[22] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[22] at LC13
+D1_CLK_1HZ_CNT[22]_p1_out = D1_CLK_1HZ_CNT[23] & D1_CLK_1HZ_CNT[22] & !D1_CLK_1HZ_CNT[21] & !D1_CLK_1HZ_CNT[20] & !D1_CLK_1HZ_CNT[19] & !D1_CLK_1HZ_CNT[18] & !D1_CLK_1HZ_CNT[17] & !D1_CLK_1HZ_CNT[16] & !D1_CLK_1HZ_CNT[15] & !D1_CLK_1HZ_CNT[14] & !D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & !D1_CLK_1HZ_CNT[11] & !D1_CLK_1HZ_CNT[10] & !D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[5] & !D1_CLK_1HZ_CNT[4] & !D1_CLK_1HZ_CNT[1] & !D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[22]_or_out = D1_CLK_1HZ_CNT[22]_p1_out # !N2L1;
+D1_CLK_1HZ_CNT[22]_reg_input = !(D1_CLK_1HZ_CNT[22]_or_out);
+D1_CLK_1HZ_CNT[22] = DFFE(D1_CLK_1HZ_CNT[22]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--N2L2 is INT_CLK_GEN:UC1|lpm_add_sub:add_rtl_0|addcore:adder[2]|a_csnbuffer:result_node|sout_node[7]~63 at LC16
+N2L2_p1_out = D1_CLK_1HZ_CNT[22] & D1_CLK_1HZ_CNT[21] & D1_CLK_1HZ_CNT[20] & D1_CLK_1HZ_CNT[19] & D1_CLK_1HZ_CNT[18] & D1_CLK_1HZ_CNT[17] & D1_CLK_1HZ_CNT[16] & D1_CLK_1HZ_CNT[15] & D1_CLK_1HZ_CNT[14] & D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & D1_CLK_1HZ_CNT[11] & D1_CLK_1HZ_CNT[10] & D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[5] & D1_CLK_1HZ_CNT[4] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2] & D1_CLK_1HZ_CNT[1] & D1_CLK_1HZ_CNT[0];
+N2L2_or_out = D1_CLK_1HZ_CNT[23];
+N2L2 = N2L2_p1_out $ N2L2_or_out;
+
+
+--D1_CLK_1HZ_CNT[23] is INT_CLK_GEN:UC1|CLK_1HZ_CNT[23] at LC15
+D1_CLK_1HZ_CNT[23]_p1_out = D1_CLK_1HZ_CNT[23] & D1_CLK_1HZ_CNT[22] & !D1_CLK_1HZ_CNT[21] & !D1_CLK_1HZ_CNT[20] & !D1_CLK_1HZ_CNT[19] & !D1_CLK_1HZ_CNT[18] & !D1_CLK_1HZ_CNT[17] & !D1_CLK_1HZ_CNT[16] & !D1_CLK_1HZ_CNT[15] & !D1_CLK_1HZ_CNT[14] & !D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & !D1_CLK_1HZ_CNT[11] & !D1_CLK_1HZ_CNT[10] & !D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[5] & !D1_CLK_1HZ_CNT[4] & !D1_CLK_1HZ_CNT[1] & !D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_CNT[23]_or_out = D1_CLK_1HZ_CNT[23]_p1_out # !N2L2;
+D1_CLK_1HZ_CNT[23]_reg_input = !(D1_CLK_1HZ_CNT[23]_or_out);
+D1_CLK_1HZ_CNT[23] = DFFE(D1_CLK_1HZ_CNT[23]_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--D1_CLK_1HZ_BUF is INT_CLK_GEN:UC1|CLK_1HZ_BUF at LC14
+D1_CLK_1HZ_BUF_reg_input = VCC;
+D1_CLK_1HZ_BUF_p3_out = D1_CLK_1HZ_CNT[23] & D1_CLK_1HZ_CNT[22] & !D1_CLK_1HZ_CNT[21] & !D1_CLK_1HZ_CNT[20] & !D1_CLK_1HZ_CNT[19] & !D1_CLK_1HZ_CNT[18] & !D1_CLK_1HZ_CNT[17] & !D1_CLK_1HZ_CNT[16] & !D1_CLK_1HZ_CNT[15] & !D1_CLK_1HZ_CNT[14] & !D1_CLK_1HZ_CNT[13] & D1_CLK_1HZ_CNT[12] & !D1_CLK_1HZ_CNT[11] & !D1_CLK_1HZ_CNT[10] & !D1_CLK_1HZ_CNT[9] & D1_CLK_1HZ_CNT[8] & D1_CLK_1HZ_CNT[5] & !D1_CLK_1HZ_CNT[4] & !D1_CLK_1HZ_CNT[1] & !D1_CLK_1HZ_CNT[0] & D1_CLK_1HZ_CNT[7] & D1_CLK_1HZ_CNT[6] & D1_CLK_1HZ_CNT[3] & D1_CLK_1HZ_CNT[2];
+D1_CLK_1HZ_BUF = TFFE(D1_CLK_1HZ_BUF_reg_input, GLOBAL(CLK_Y), , , D1_CLK_1HZ_BUF_p3_out);
+
+
+--D1_CLK_1HZ_Z is INT_CLK_GEN:UC1|CLK_1HZ_Z at LC32
+D1_CLK_1HZ_Z_or_out = D1_CLK_1HZ_BUF;
+D1_CLK_1HZ_Z_reg_input = D1_CLK_1HZ_Z_or_out;
+D1_CLK_1HZ_Z = DFFE(D1_CLK_1HZ_Z_reg_input, GLOBAL(CLK_Y), , , );
+
+
+--J1_dffs[0] is lpm_counter0:inst1|lpm_counter:lpm_counter_component|dffs[0] at LC19
+J1_dffs[0]_reg_input = VCC;
+J1_dffs[0] = TFFE(J1_dffs[0]_reg_input, D1_CLK_1HZ_Z, , , );
+
+
+--J1_dffs[1] is lpm_counter0:inst1|lpm_counter:lpm_counter_component|dffs[1] at LC18
+J1_dffs[1]_or_out = J1_dffs[0];
+J1_dffs[1]_reg_input = J1_dffs[1]_or_out;
+J1_dffs[1] = TFFE(J1_dffs[1]_reg_input, D1_CLK_1HZ_Z, , , );
+
+
+--J1_dffs[2] is lpm_counter0:inst1|lpm_counter:lpm_counter_component|dffs[2] at LC17
+J1_dffs[2]_p1_out = J1_dffs[1] & J1_dffs[0];
+J1_dffs[2]_or_out = J1_dffs[2]_p1_out;
+J1_dffs[2]_reg_input = J1_dffs[2]_or_out;
+J1_dffs[2] = TFFE(J1_dffs[2]_reg_input, D1_CLK_1HZ_Z, , , );
+
+
+--J1_dffs[3] is lpm_counter0:inst1|lpm_counter:lpm_counter_component|dffs[3] at LC20
+J1_dffs[3]_p1_out = J1_dffs[2] & J1_dffs[1] & J1_dffs[0];
+J1_dffs[3]_or_out = J1_dffs[3]_p1_out;
+J1_dffs[3]_reg_input = J1_dffs[3]_or_out;
+J1_dffs[3] = TFFE(J1_dffs[3]_reg_input, D1_CLK_1HZ_Z, , , );
+
+
+--G1L1 is BCD7SEG:inst|lpm_mux0:inst|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~174 at LC91
+G1L1_p1_out = J1_dffs[1] & J1_dffs[3];
+G1L1_p2_out = J1_dffs[3] & J1_dffs[2];
+G1L1_p3_out = !J1_dffs[1] & J1_dffs[2] & !J1_dffs[0];
+G1L1_p4_out = !J1_dffs[1] & !J1_dffs[3] & !J1_dffs[2] & J1_dffs[0];
+G1L1_or_out = G1L1_p1_out # G1L1_p2_out # G1L1_p3_out # G1L1_p4_out;
+G1L1 = G1L1_or_out;
+
+
+--G2L1 is BCD7SEG:inst|lpm_mux0:inst4|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~75 at LC93
+G2L1_p1_out = J1_dffs[3] & J1_dffs[1];
+G2L1_p2_out = J1_dffs[3] & J1_dffs[2];
+G2L1_p3_out = J1_dffs[1] & J1_dffs[2] & !J1_dffs[0];
+G2L1_p4_out = !J1_dffs[1] & J1_dffs[2] & J1_dffs[0];
+G2L1_or_out = G2L1_p1_out # G2L1_p2_out # G2L1_p3_out # G2L1_p4_out;
+G2L1 = G2L1_or_out;
+
+
+--G3L1 is BCD7SEG:inst|lpm_mux0:inst9|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~40 at LC94
+G3L1_p1_out = J1_dffs[1] & J1_dffs[3];
+G3L1_p2_out = J1_dffs[1] & !J1_dffs[0] & !J1_dffs[2];
+G3L1_p3_out = J1_dffs[3] & J1_dffs[2];
+G3L1_or_out = G3L1_p1_out # G3L1_p2_out # G3L1_p3_out;
+G3L1 = G3L1_or_out;
+
+
+--G4L1 is BCD7SEG:inst|lpm_mux0:inst14|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~120 at LC97
+G4L1_p0_out = J1_dffs[2] & J1_dffs[0] & J1_dffs[1];
+G4L1_p1_out = !J1_dffs[3] & !J1_dffs[2] & J1_dffs[0] & !J1_dffs[1];
+G4L1_p2_out = J1_dffs[3] & J1_dffs[1];
+G4L1_p3_out = J1_dffs[3] & J1_dffs[2];
+G4L1_p4_out = J1_dffs[2] & !J1_dffs[0] & !J1_dffs[1];
+G4L1_or_out = G4L1_p0_out # G4L1_p1_out # G4L1_p2_out # G4L1_p3_out # G4L1_p4_out;
+G4L1 = G4L1_or_out;
+
+
+--G6L1 is BCD7SEG:inst|lpm_mux0:inst20|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~152 at LC101
+G6L1_p1_out = !J1_dffs[3] & !J1_dffs[2] & J1_dffs[0];
+G6L1_p2_out = J1_dffs[0] & J1_dffs[1];
+G6L1_p3_out = !J1_dffs[2] & J1_dffs[1];
+G6L1_p4_out = J1_dffs[3] & J1_dffs[2];
+G6L1_or_out = G6L1_p1_out # G6L1_p2_out # G6L1_p3_out # G6L1_p4_out;
+G6L1 = G6L1_or_out;
+
+
+--G7L1 is BCD7SEG:inst|lpm_mux0:inst25|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~79 at LC104
+G7L1_p1_out = !J1_dffs[3] & !J1_dffs[2] & !J1_dffs[1];
+G7L1_p2_out = J1_dffs[3] & J1_dffs[1];
+G7L1_p3_out = J1_dffs[3] & J1_dffs[2];
+G7L1_p4_out = J1_dffs[2] & J1_dffs[1] & J1_dffs[0];
+G7L1_or_out = G7L1_p1_out # G7L1_p2_out # G7L1_p3_out # G7L1_p4_out;
+G7L1 = G7L1_or_out;
+
+
+--G5L1 is BCD7SEG:inst|lpm_mux0:inst19|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~39 at LC99
+G5L1_p1_out = J1_dffs[3] & J1_dffs[1];
+G5L1_p2_out = !J1_dffs[1] & J1_dffs[2];
+G5L1_or_out = G5L1_p1_out # G5L1_p2_out # J1_dffs[0];
+G5L1 = G5L1_or_out;
+
+
+--CLK_Y is CLK_Y at PIN_83
+--operation mode is input
+
+CLK_Y = INPUT();
+
+
+--SEGA_Z is SEGA_Z at PIN_58
+--operation mode is output
+
+SEGA_Z = OUTPUT(G1L1);
+
+
+--SEGB_Z is SEGB_Z at PIN_60
+--operation mode is output
+
+SEGB_Z = OUTPUT(G2L1);
+
+
+--SEGC_Z is SEGC_Z at PIN_61
+--operation mode is output
+
+SEGC_Z = OUTPUT(G3L1);
+
+
+--SEGD_Z is SEGD_Z at PIN_63
+--operation mode is output
+
+SEGD_Z = OUTPUT(G4L1);
+
+
+--SEGE_Z is SEGE_Z at PIN_64
+--operation mode is output
+
+SEGE_Z = OUTPUT(G5L1);
+
+
+--SEGF_Z is SEGF_Z at PIN_65
+--operation mode is output
+
+SEGF_Z = OUTPUT(G6L1);
+
+
+--SEGG_Z is SEGG_Z at PIN_67
+--operation mode is output
+
+SEGG_Z = OUTPUT(G7L1);
+
+
+
+
+
+

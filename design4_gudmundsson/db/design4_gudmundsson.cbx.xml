@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="design4_gudmundsson">
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4_gudmundsson|BCD7SEG:BCD7SEG_1|lpm_mux0:inst19|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4_gudmundsson|BCD7SEG:BCD7SEG_1|lpm_mux0:inst20|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4_gudmundsson|BCD7SEG:BCD7SEG_1|lpm_mux0:inst4|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4_gudmundsson|BCD7SEG:BCD7SEG_1|lpm_mux0:inst|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4_gudmundsson|BCD7SEG:BCD7SEG_1|lpm_mux0:inst14|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4_gudmundsson|BCD7SEG:BCD7SEG_1|lpm_mux0:inst25|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4_gudmundsson|BCD7SEG:BCD7SEG_1|lpm_mux0:inst9|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_pbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4_gudmundsson|INT_CLK_GEN:INT_CLK_GEN_1|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_9ph.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

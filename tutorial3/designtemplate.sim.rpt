@@ -1,0 +1,245 @@
+Simulator report for designtemplate
+Thu May 02 10:50:02 2013
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------+
+; Simulator Summary                            ;
++-----------------------------+----------------+
+; Type                        ; Value          ;
++-----------------------------+----------------+
+; Simulation Start Time       ; 0 ps           ;
+; Simulation End Time         ; 1.0 us         ;
+; Simulation Netlist Size     ; 46 nodes       ;
+; Simulation Coverage         ;      13.64 %   ;
+; Total Number of Transitions ; 396            ;
+; Simulation Breakpoints      ; 0              ;
+; Family                      ; MAX7000S       ;
+; Device                      ; EPM7128SLC84-7 ;
++-----------------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      13.64 % ;
+; Total nodes checked                                 ; 46           ;
+; Total output ports checked                          ; 44           ;
+; Total output ports with complete 1/0-value coverage ; 6            ;
+; Total output ports with no 1/0-value coverage       ; 37           ;
+; Total output ports with no 1-value coverage         ; 37           ;
+; Total output ports with no 0-value coverage         ; 38           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                            ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; Node Name                                                ; Output Port Name                                         ; Output Port Type ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[1] ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[1] ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[2] ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[2] ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[3] ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[3] ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[4] ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[4] ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[5] ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[5] ; dataout          ;
+; |designtemplate|CLK_Y                                    ; |designtemplate|CLK_Y~corein                             ; dataout          ;
++----------------------------------------------------------+----------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                           ; Output Port Name                                                                                                    ; Output Port Type ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[7]                                                            ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[7]                                                            ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[8]                                                            ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[8]                                                            ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[9]                                                            ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[9]                                                            ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[10]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[10]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[11]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[11]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[12]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[12]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[13]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[13]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[14]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[14]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[15]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[15]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[16]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[16]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[17]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[17]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[18]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[18]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[19]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[19]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[20]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[20]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[21]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[21]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|lpm_add_sub:Add0|addcore:adder[2]|a_csnbuffer:result_node|sout_node[6]~53 ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|lpm_add_sub:Add0|addcore:adder[2]|a_csnbuffer:result_node|sout_node[6]~53 ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[22]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[22]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|lpm_add_sub:Add0|addcore:adder[2]|a_csnbuffer:result_node|sout_node[7]~57 ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|lpm_add_sub:Add0|addcore:adder[2]|a_csnbuffer:result_node|sout_node[7]~57 ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[23]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[23]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_BUF                                                               ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_BUF                                                               ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_Z                                                                 ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_Z                                                                 ; dataout          ;
+; |designtemplate|inst                                                                                                ; |designtemplate|inst                                                                                                ; dataout          ;
+; |designtemplate|inst1                                                                                               ; |designtemplate|inst1                                                                                               ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst9|lpm_mux:lpm_mux_component|muxlut:$00009|_~3                        ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst9|lpm_mux:lpm_mux_component|muxlut:$00009|_~3                        ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~4               ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~4               ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst4|lpm_mux:lpm_mux_component|muxlut:$00009|_~4                        ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst4|lpm_mux:lpm_mux_component|muxlut:$00009|_~4                        ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst19|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~3             ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst19|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~3             ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst25|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~4             ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst25|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~4             ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst14|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~7             ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst14|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~7             ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst20|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~8             ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst20|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~8             ; dataout          ;
+; |designtemplate|SEGA_Z                                                                                              ; |designtemplate|SEGA_Z                                                                                              ; padio            ;
+; |designtemplate|SEGC_Z                                                                                              ; |designtemplate|SEGC_Z                                                                                              ; padio            ;
+; |designtemplate|SEGB_Z                                                                                              ; |designtemplate|SEGB_Z                                                                                              ; padio            ;
+; |designtemplate|SEGE_Z                                                                                              ; |designtemplate|SEGE_Z                                                                                              ; padio            ;
+; |designtemplate|SEGD_Z                                                                                              ; |designtemplate|SEGD_Z                                                                                              ; padio            ;
+; |designtemplate|SEGF_Z                                                                                              ; |designtemplate|SEGF_Z                                                                                              ; padio            ;
+; |designtemplate|SEGG_Z                                                                                              ; |designtemplate|SEGG_Z                                                                                              ; padio            ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                           ; Output Port Name                                                                                                    ; Output Port Type ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[6]                                                            ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[6]                                                            ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[7]                                                            ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[7]                                                            ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[8]                                                            ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[8]                                                            ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[9]                                                            ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[9]                                                            ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[10]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[10]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[11]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[11]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[12]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[12]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[13]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[13]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[14]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[14]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[15]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[15]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[16]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[16]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[17]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[17]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[18]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[18]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[19]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[19]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[20]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[20]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[21]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[21]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|lpm_add_sub:Add0|addcore:adder[2]|a_csnbuffer:result_node|sout_node[6]~53 ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|lpm_add_sub:Add0|addcore:adder[2]|a_csnbuffer:result_node|sout_node[6]~53 ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[22]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[22]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|lpm_add_sub:Add0|addcore:adder[2]|a_csnbuffer:result_node|sout_node[7]~57 ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|lpm_add_sub:Add0|addcore:adder[2]|a_csnbuffer:result_node|sout_node[7]~57 ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[23]                                                           ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_CNT[23]                                                           ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_BUF                                                               ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_BUF                                                               ; dataout          ;
+; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_Z                                                                 ; |designtemplate|INT_CLK_GEN:INT_CLK_GEN_1|CLK_1HZ_Z                                                                 ; dataout          ;
+; |designtemplate|inst                                                                                                ; |designtemplate|inst                                                                                                ; dataout          ;
+; |designtemplate|inst1                                                                                               ; |designtemplate|inst1                                                                                               ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst9|lpm_mux:lpm_mux_component|muxlut:$00009|_~3                        ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst9|lpm_mux:lpm_mux_component|muxlut:$00009|_~3                        ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~4               ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~4               ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst4|lpm_mux:lpm_mux_component|muxlut:$00009|_~4                        ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst4|lpm_mux:lpm_mux_component|muxlut:$00009|_~4                        ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst19|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~3             ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst19|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~3             ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst25|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~4             ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst25|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~4             ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst14|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~7             ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst14|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~7             ; dataout          ;
+; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst20|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~8             ; |designtemplate|BCD7SEG:BCD7SEG_1|lpm_mux0:inst20|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~8             ; dataout          ;
+; |designtemplate|SEGA_Z                                                                                              ; |designtemplate|SEGA_Z                                                                                              ; padio            ;
+; |designtemplate|SEGC_Z                                                                                              ; |designtemplate|SEGC_Z                                                                                              ; padio            ;
+; |designtemplate|SEGB_Z                                                                                              ; |designtemplate|SEGB_Z                                                                                              ; padio            ;
+; |designtemplate|SEGE_Z                                                                                              ; |designtemplate|SEGE_Z                                                                                              ; padio            ;
+; |designtemplate|SEGD_Z                                                                                              ; |designtemplate|SEGD_Z                                                                                              ; padio            ;
+; |designtemplate|SEGF_Z                                                                                              ; |designtemplate|SEGF_Z                                                                                              ; padio            ;
+; |designtemplate|SEGG_Z                                                                                              ; |designtemplate|SEGG_Z                                                                                              ; padio            ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Thu May 02 10:50:00 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off designtemplate -c designtemplate
+Info: Using vector source file "Z:/ENGN3050/tutorial3/designtemplate.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of designtemplate.vwf called designtemplate.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      13.64 %
+Info: Number of transitions in simulation is 396
+Info: Vector file designtemplate.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 199 megabytes
+    Info: Processing ended: Thu May 02 10:50:02 2013
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,450 @@
+Analysis & Synthesis report for designtemplate
+Wed Jan 17 13:41:05 2007
+Version 5.1 Build 176 10/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst|lpm_mux:lpm_mux_component
+  8. Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst4|lpm_mux:lpm_mux_component
+  9. Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst9|lpm_mux:lpm_mux_component
+ 10. Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst14|lpm_mux:lpm_mux_component
+ 11. Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst19|lpm_mux:lpm_mux_component
+ 12. Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst20|lpm_mux:lpm_mux_component
+ 13. Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst25|lpm_mux:lpm_mux_component
+ 14. Parameter Settings for User Entity Instance: lpm_counter0:inst1|lpm_counter:lpm_counter_component
+ 15. Parameter Settings for Inferred Entity Instance: INT_CLK_GEN:UC1|lpm_add_sub:add_rtl_0
+ 16. Analysis & Synthesis Equations
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Jan 17 13:41:05 2007    ;
+; Quartus II Version          ; 5.1 Build 176 10/26/2005 SJ Full Version ;
+; Revision Name               ; designtemplate                           ;
+; Top-level Entity Name       ; designtemplate                           ;
+; Family                      ; MAX7000S                                 ;
+; Total macrocells            ; 39                                       ;
+; Total pins                  ; 8                                        ;
++-----------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++----------------------------------------------------------------------+----------------+----------------+
+; Option                                                               ; Setting        ; Default Value  ;
++----------------------------------------------------------------------+----------------+----------------+
+; Device                                                               ; EPM7128SLC84-7 ;                ;
+; Top-level entity name                                                ; designtemplate ; designtemplate ;
+; Family name                                                          ; MAX7000S       ; Stratix        ;
+; Use smart compilation                                                ; Off            ; Off            ;
+; Create Debugging Nodes for IP Cores                                  ; Off            ; Off            ;
+; Preserve fewer node names                                            ; On             ; On             ;
+; Disable OpenCore Plus hardware evaluation                            ; Off            ; Off            ;
+; Verilog Version                                                      ; Verilog_2001   ; Verilog_2001   ;
+; VHDL Version                                                         ; VHDL93         ; VHDL93         ;
+; State Machine Processing                                             ; Auto           ; Auto           ;
+; Extract Verilog State Machines                                       ; On             ; On             ;
+; Extract VHDL State Machines                                          ; On             ; On             ;
+; Add Pass-Through Logic to Inferred RAMs                              ; On             ; On             ;
+; NOT Gate Push-Back                                                   ; On             ; On             ;
+; Power-Up Don't Care                                                  ; On             ; On             ;
+; Remove Redundant Logic Cells                                         ; Off            ; Off            ;
+; Remove Duplicate Registers                                           ; On             ; On             ;
+; Ignore CARRY Buffers                                                 ; Off            ; Off            ;
+; Ignore CASCADE Buffers                                               ; Off            ; Off            ;
+; Ignore GLOBAL Buffers                                                ; Off            ; Off            ;
+; Ignore ROW GLOBAL Buffers                                            ; Off            ; Off            ;
+; Ignore LCELL Buffers -- MAX 7000B/7000AE/3000A/7000S/7000A           ; Auto           ; Auto           ;
+; Ignore SOFT Buffers -- MAX 7000B/7000AE/3000A/7000S/7000A            ; Off            ; Off            ;
+; Limit AHDL Integers to 32 Bits                                       ; Off            ; Off            ;
+; Optimization Technique -- MAX 7000B/7000AE/3000A/7000S/7000A         ; Speed          ; Speed          ;
+; Allow XOR Gate Usage                                                 ; On             ; On             ;
+; Auto Logic Cell Insertion                                            ; On             ; On             ;
+; Parallel Expander Chain Length -- MAX 7000B/7000AE/3000A/7000S/7000A ; 4              ; 4              ;
+; Auto Parallel Expanders                                              ; On             ; On             ;
+; Auto Open-Drain Pins                                                 ; On             ; On             ;
+; Remove Duplicate Logic                                               ; On             ; On             ;
+; Auto Resource Sharing                                                ; Off            ; Off            ;
+; Maximum Fan-in Per Macrocell -- MAX 7000B/7000AE/3000A/7000S/7000A   ; 100            ; 100            ;
+; Ignore translate_off and translate_on Synthesis Directives           ; Off            ; Off            ;
+; Show Parameter Settings Tables in Synthesis Report                   ; On             ; On             ;
+; HDL message level                                                    ; Level2         ; Level2         ;
++----------------------------------------------------------------------+----------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                   ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+
+; INT_CLK_GEN.vhd                  ; yes             ; User VHDL File                     ; C:/Documents and Settings/kparchesco/Desktop/designtemplate/INT_CLK_GEN.vhd    ;
+; designtemplate.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Documents and Settings/kparchesco/Desktop/designtemplate/designtemplate.bdf ;
+; BCD7SEG.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Documents and Settings/kparchesco/Desktop/designtemplate/BCD7SEG.bdf        ;
+; lpm_mux0.vhd                     ; yes             ; Other                              ; C:/Documents and Settings/kparchesco/Desktop/designtemplate/lpm_mux0.vhd       ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/alteraquarutsii51/libraries/megafunctions/lpm_mux.tdf                       ;
+; aglobal51.inc                    ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/aglobal51.inc                     ;
+; muxlut.inc                       ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/muxlut.inc                        ;
+; bypassff.inc                     ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/bypassff.inc                      ;
+; altshift.inc                     ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/altshift.inc                      ;
+; altshift.tdf                     ; yes             ; Megafunction                       ; c:/alteraquarutsii51/libraries/megafunctions/altshift.tdf                      ;
+; muxlut.tdf                       ; yes             ; Megafunction                       ; c:/alteraquarutsii51/libraries/megafunctions/muxlut.tdf                        ;
+; lpm_counter0.vhd                 ; yes             ; Other                              ; C:/Documents and Settings/kparchesco/Desktop/designtemplate/lpm_counter0.vhd   ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/alteraquarutsii51/libraries/megafunctions/lpm_counter.tdf                   ;
+; lpm_constant.inc                 ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/lpm_constant.inc                  ;
+; lpm_decode.inc                   ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/lpm_decode.inc                    ;
+; lpm_add_sub.inc                  ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/lpm_add_sub.inc                   ;
+; cmpconst.inc                     ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/cmpconst.inc                      ;
+; lpm_compare.inc                  ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/lpm_compare.inc                   ;
+; lpm_counter.inc                  ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/lpm_counter.inc                   ;
+; dffeea.inc                       ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/dffeea.inc                        ;
+; alt_synch_counter.inc            ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/alt_synch_counter.inc             ;
+; alt_synch_counter_f.inc          ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/alt_synch_counter_f.inc           ;
+; alt_counter_f10ke.inc            ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/alt_counter_f10ke.inc             ;
+; alt_counter_stratix.inc          ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/alt_counter_stratix.inc           ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                       ; c:/alteraquarutsii51/libraries/megafunctions/lpm_add_sub.tdf                   ;
+; addcore.inc                      ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/addcore.inc                       ;
+; look_add.inc                     ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/look_add.inc                      ;
+; alt_stratix_add_sub.inc          ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/alt_stratix_add_sub.inc           ;
+; alt_mercury_add_sub.inc          ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/alt_mercury_add_sub.inc           ;
+; addcore.tdf                      ; yes             ; Megafunction                       ; c:/alteraquarutsii51/libraries/megafunctions/addcore.tdf                       ;
+; a_csnbuffer.inc                  ; yes             ; Other                              ; c:/alteraquarutsii51/libraries/megafunctions/a_csnbuffer.inc                   ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction                       ; c:/alteraquarutsii51/libraries/megafunctions/a_csnbuffer.tdf                   ;
+; look_add.tdf                     ; yes             ; Megafunction                       ; c:/alteraquarutsii51/libraries/megafunctions/look_add.tdf                      ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++----------------------+--------------------------------+
+; Resource             ; Usage                          ;
++----------------------+--------------------------------+
+; Logic cells          ; 39                             ;
+; Total registers      ; 30                             ;
+; I/O pins             ; 8                              ;
+; Maximum fan-out node ; INT_CLK_GEN:UC1|CLK_1HZ_CNT[0] ;
+; Maximum fan-out      ; 27                             ;
+; Total fan-out        ; 586                            ;
+; Average fan-out      ; 12.47                          ;
++----------------------+--------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                            ;
++-------------------------------------------+------------+------+------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                ; Macrocells ; Pins ; Full Hierarchy Name                                                                            ;
++-------------------------------------------+------------+------+------------------------------------------------------------------------------------------------+
+; |designtemplate                           ; 39         ; 8    ; |designtemplate                                                                                ;
+;    |BCD7SEG:inst|                         ; 7          ; 0    ; |designtemplate|BCD7SEG:inst                                                                   ;
+;       |lpm_mux0:inst14|                   ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst14                                                   ;
+;          |lpm_mux:lpm_mux_component|      ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst14|lpm_mux:lpm_mux_component                         ;
+;             |muxlut:$00009|               ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst14|lpm_mux:lpm_mux_component|muxlut:$00009           ;
+;       |lpm_mux0:inst19|                   ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst19                                                   ;
+;          |lpm_mux:lpm_mux_component|      ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst19|lpm_mux:lpm_mux_component                         ;
+;             |muxlut:$00009|               ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst19|lpm_mux:lpm_mux_component|muxlut:$00009           ;
+;       |lpm_mux0:inst20|                   ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst20                                                   ;
+;          |lpm_mux:lpm_mux_component|      ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst20|lpm_mux:lpm_mux_component                         ;
+;             |muxlut:$00009|               ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst20|lpm_mux:lpm_mux_component|muxlut:$00009           ;
+;       |lpm_mux0:inst25|                   ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst25                                                   ;
+;          |lpm_mux:lpm_mux_component|      ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst25|lpm_mux:lpm_mux_component                         ;
+;             |muxlut:$00009|               ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst25|lpm_mux:lpm_mux_component|muxlut:$00009           ;
+;       |lpm_mux0:inst4|                    ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst4                                                    ;
+;          |lpm_mux:lpm_mux_component|      ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst4|lpm_mux:lpm_mux_component                          ;
+;             |muxlut:$00009|               ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst4|lpm_mux:lpm_mux_component|muxlut:$00009            ;
+;       |lpm_mux0:inst9|                    ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst9                                                    ;
+;          |lpm_mux:lpm_mux_component|      ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst9|lpm_mux:lpm_mux_component                          ;
+;             |muxlut:$00009|               ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst9|lpm_mux:lpm_mux_component|muxlut:$00009            ;
+;       |lpm_mux0:inst|                     ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst                                                     ;
+;          |lpm_mux:lpm_mux_component|      ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst|lpm_mux:lpm_mux_component                           ;
+;             |muxlut:$00009|               ; 1          ; 0    ; |designtemplate|BCD7SEG:inst|lpm_mux0:inst|lpm_mux:lpm_mux_component|muxlut:$00009             ;
+;    |INT_CLK_GEN:UC1|                      ; 28         ; 0    ; |designtemplate|INT_CLK_GEN:UC1                                                                ;
+;       |lpm_add_sub:add_rtl_0|             ; 2          ; 0    ; |designtemplate|INT_CLK_GEN:UC1|lpm_add_sub:add_rtl_0                                          ;
+;          |addcore:adder[2]|               ; 2          ; 0    ; |designtemplate|INT_CLK_GEN:UC1|lpm_add_sub:add_rtl_0|addcore:adder[2]                         ;
+;             |a_csnbuffer:result_node|     ; 2          ; 0    ; |designtemplate|INT_CLK_GEN:UC1|lpm_add_sub:add_rtl_0|addcore:adder[2]|a_csnbuffer:result_node ;
+;    |lpm_counter0:inst1|                   ; 4          ; 0    ; |designtemplate|lpm_counter0:inst1                                                             ;
+;       |lpm_counter:lpm_counter_component| ; 4          ; 0    ; |designtemplate|lpm_counter0:inst1|lpm_counter:lpm_counter_component                           ;
++-------------------------------------------+------------+------+------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst|lpm_mux:lpm_mux_component ;
++------------------------+----------+---------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                          ;
++------------------------+----------+---------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                ;
+; LPM_WIDTH              ; 1        ; Integer                                                       ;
+; LPM_SIZE               ; 4        ; Integer                                                       ;
+; LPM_WIDTHS             ; 2        ; Integer                                                       ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                       ;
+; CBXI_PARAMETER         ; mux_pbc  ; Untyped                                                       ;
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                       ;
++------------------------+----------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst4|lpm_mux:lpm_mux_component ;
++------------------------+----------+----------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                           ;
++------------------------+----------+----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                 ;
+; LPM_WIDTH              ; 1        ; Integer                                                        ;
+; LPM_SIZE               ; 4        ; Integer                                                        ;
+; LPM_WIDTHS             ; 2        ; Integer                                                        ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                        ;
+; CBXI_PARAMETER         ; mux_pbc  ; Untyped                                                        ;
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                        ;
++------------------------+----------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst9|lpm_mux:lpm_mux_component ;
++------------------------+----------+----------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                           ;
++------------------------+----------+----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                 ;
+; LPM_WIDTH              ; 1        ; Integer                                                        ;
+; LPM_SIZE               ; 4        ; Integer                                                        ;
+; LPM_WIDTHS             ; 2        ; Integer                                                        ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                        ;
+; CBXI_PARAMETER         ; mux_pbc  ; Untyped                                                        ;
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                        ;
++------------------------+----------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst14|lpm_mux:lpm_mux_component ;
++------------------------+----------+-----------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                            ;
++------------------------+----------+-----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                  ;
+; LPM_WIDTH              ; 1        ; Integer                                                         ;
+; LPM_SIZE               ; 4        ; Integer                                                         ;
+; LPM_WIDTHS             ; 2        ; Integer                                                         ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                         ;
+; CBXI_PARAMETER         ; mux_pbc  ; Untyped                                                         ;
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                         ;
++------------------------+----------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst19|lpm_mux:lpm_mux_component ;
++------------------------+----------+-----------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                            ;
++------------------------+----------+-----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                  ;
+; LPM_WIDTH              ; 1        ; Integer                                                         ;
+; LPM_SIZE               ; 4        ; Integer                                                         ;
+; LPM_WIDTHS             ; 2        ; Integer                                                         ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                         ;
+; CBXI_PARAMETER         ; mux_pbc  ; Untyped                                                         ;
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                         ;
++------------------------+----------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst20|lpm_mux:lpm_mux_component ;
++------------------------+----------+-----------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                            ;
++------------------------+----------+-----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                  ;
+; LPM_WIDTH              ; 1        ; Integer                                                         ;
+; LPM_SIZE               ; 4        ; Integer                                                         ;
+; LPM_WIDTHS             ; 2        ; Integer                                                         ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                         ;
+; CBXI_PARAMETER         ; mux_pbc  ; Untyped                                                         ;
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                         ;
++------------------------+----------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BCD7SEG:inst|lpm_mux0:inst25|lpm_mux:lpm_mux_component ;
++------------------------+----------+-----------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                            ;
++------------------------+----------+-----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                  ;
+; LPM_WIDTH              ; 1        ; Integer                                                         ;
+; LPM_SIZE               ; 4        ; Integer                                                         ;
+; LPM_WIDTHS             ; 2        ; Integer                                                         ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                         ;
+; CBXI_PARAMETER         ; mux_pbc  ; Untyped                                                         ;
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                         ;
++------------------------+----------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_counter0:inst1|lpm_counter:lpm_counter_component ;
++------------------------+-------------+------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                       ;
++------------------------+-------------+------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                             ;
+; LPM_WIDTH              ; 4           ; Integer                                                    ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                    ;
+; LPM_MODULUS            ; 0           ; Untyped                                                    ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                    ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                    ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                    ;
+; DEVICE_FAMILY          ; MAX7000S    ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                         ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                         ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                    ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                    ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                    ;
+; CBXI_PARAMETER         ; NOTHING     ; Untyped                                                    ;
++------------------------+-------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: INT_CLK_GEN:UC1|lpm_add_sub:add_rtl_0 ;
++------------------------+-------------+-------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                            ;
++------------------------+-------------+-------------------------------------------------+
+; LPM_WIDTH              ; 24          ; Untyped                                         ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                         ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                         ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                         ;
+; LPM_PIPELINE           ; 0           ; Untyped                                         ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                         ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                         ;
+; OPTIMIZE_FOR_SPEED     ; 9           ; Untyped                                         ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                         ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                              ;
+; DEVICE_FAMILY          ; MAX7000S    ; Untyped                                         ;
+; USE_WYS                ; OFF         ; Untyped                                         ;
+; STYLE                  ; FAST        ; Untyped                                         ;
+; CBXI_PARAMETER         ; add_sub_9ph ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                  ;
++------------------------+-------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/Documents and Settings/kparchesco/Desktop/designtemplate/designtemplate.map.eqn.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 5.1 Build 176 10/26/2005 SJ Full Version
+    Info: Processing started: Wed Jan 17 13:41:03 2007
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off designtemplate -c designtemplate
+Info: Found 2 design units, including 1 entities, in source file INT_CLK_GEN.vhd
+    Info: Found design unit 1: INT_CLK_GEN-BEHAVORIAL
+    Info: Found entity 1: INT_CLK_GEN
+Info: Found 1 design units, including 1 entities, in source file designtemplate.bdf
+    Info: Found entity 1: designtemplate
+Info: Found 1 design units, including 1 entities, in source file BCD7SEG.bdf
+    Info: Found entity 1: BCD7SEG
+Info: Elaborating entity "designtemplate" for the top level hierarchy
+Info: Elaborating entity "BCD7SEG" for hierarchy "BCD7SEG:inst"
+Warning: Using design file lpm_mux0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: lpm_mux0-SYN
+    Info: Found entity 1: lpm_mux0
+Info: Elaborating entity "lpm_mux0" for hierarchy "BCD7SEG:inst|lpm_mux0:inst"
+Info: Found 1 design units, including 1 entities, in source file ../../../../alteraquarutsii51/libraries/megafunctions/lpm_mux.tdf
+    Info: Found entity 1: lpm_mux
+Info: Elaborating entity "lpm_mux" for hierarchy "BCD7SEG:inst|lpm_mux0:inst|lpm_mux:lpm_mux_component"
+Info: Found 1 design units, including 1 entities, in source file ../../../../alteraquarutsii51/libraries/megafunctions/altshift.tdf
+    Info: Found entity 1: altshift
+Info: Elaborating entity "altshift" for hierarchy "BCD7SEG:inst|lpm_mux0:inst|lpm_mux:lpm_mux_component|altshift:external_latency_ffs"
+Info: Found 1 design units, including 1 entities, in source file ../../../../alteraquarutsii51/libraries/megafunctions/muxlut.tdf
+    Info: Found entity 1: muxlut
+Info: Elaborating entity "muxlut" for hierarchy "BCD7SEG:inst|lpm_mux0:inst|lpm_mux:lpm_mux_component|muxlut:$00009"
+Warning: Using design file lpm_counter0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: lpm_counter0-SYN
+    Info: Found entity 1: lpm_counter0
+Info: Elaborating entity "lpm_counter0" for hierarchy "lpm_counter0:inst1"
+Info: Found 1 design units, including 1 entities, in source file ../../../../alteraquarutsii51/libraries/megafunctions/lpm_counter.tdf
+    Info: Found entity 1: lpm_counter
+Info: Elaborating entity "lpm_counter" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Elaborating entity "INT_CLK_GEN" for hierarchy "INT_CLK_GEN:UC1"
+Info: Found 1 design units, including 1 entities, in source file ../../../../alteraquarutsii51/libraries/megafunctions/lpm_add_sub.tdf
+    Info: Found entity 1: lpm_add_sub
+Info: Found 1 design units, including 1 entities, in source file ../../../../alteraquarutsii51/libraries/megafunctions/addcore.tdf
+    Info: Found entity 1: addcore
+Info: Found 1 design units, including 1 entities, in source file ../../../../alteraquarutsii51/libraries/megafunctions/a_csnbuffer.tdf
+    Info: Found entity 1: a_csnbuffer
+Info: Found 1 design units, including 1 entities, in source file ../../../../alteraquarutsii51/libraries/megafunctions/look_add.tdf
+    Info: Found entity 1: look_add
+Info: Ignored 24 buffer(s)
+    Info: Ignored 24 SOFT buffer(s)
+Info: Promoted pin-driven signal(s) to global signal
+    Info: Promoted clock signal driven by pin "CLK_Y" to global clock signal
+Info: Implemented 47 device resources after synthesis - the final resource count might be different
+    Info: Implemented 1 input pins
+    Info: Implemented 7 output pins
+    Info: Implemented 39 macrocells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Processing ended: Wed Jan 17 13:41:05 2007
+    Info: Elapsed time: 00:00:03
+
+
